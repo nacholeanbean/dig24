@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== SHOELACE ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.88/dist/themes/light.css">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.88/dist/shoelace.js"></script>  
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="images/tree.png" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>        
+        
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!--=============== LOTTIE ===============-->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+        <title>A3 Assignment</title>
+    </head>
+    <body>
+
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class='bx bxs-home-alt-2' ></i>
+                </a>
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">
+                                <i class='bx bx-home-alt-2' ></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#budget" class="nav__link">
+                                <i class='bx bx-spreadsheet'></i>
+                                <span>Budget</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#debt" class="nav__link">
+                                <i class='bx bxs-credit-card' ></i>
+                                <span>Debt</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#invest" class="nav__link">
+                                <i class='bx bx-trending-up' ></i>
+                                <span>Invest</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== SECTION 1, INTRO/HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Let's learn finance <br>
+                        </h1>
+                        <p class="home__description">
+                            From budgeting, to debt and investing learn the basics of Australian finance.
+                        </p>
+
+                        <div class="home_feature-cards">
+                            <!--==================== RESOURCE CARDS ====================-->
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Analyse my spending
+                                </h1>
+                                <span class="home__card-description">
+                                    Input your expenses and see how <br> your spending is split.
+                                </span>
+                                <a href="https://www.commbank.com.au/digital/calculators/budget-planner-calculator" class="button">
+                                    View online calculator
+                                </a>
+                            </div>
+
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Explore investments
+                                </h1>
+                                <span class="home__card-description">
+                                    View investments available through <br> broker platform Pearler.
+                                </span>
+                                <a href="https://pearler.com/explore/invest" class="button">
+                                    Explore investments
+                                </a>
+                            </div>
+
+                            <lottie-player
+                            src="https://lottie.host/6e41f114-9dd6-4d13-8ddd-d81342084faa/LANoJ2g4x8.json"
+                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
+                            </lottie-player>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== BUDGET ====================-->
+            <section class="budget_container" id="budget">
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <div class="sections_container">
+                        <h1 class="home__title">
+                            Step 1: Budget <br>
+                        </h1>
+                        <img class="section_image" src="img/blender-.png" alt="Blender ">
+                        <p class="home__description">
+                            The first step to learning about finance is learning how to budget your funds to cover all expenses, and know how much you have left afterwards.
+                        </p>
+                        </div>
+                        <div class="flex-container">
+                            <!--==================== BUDGET RESOURCE CARDS ====================-->
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Sorting your expenses
+                                </h1>
+                                <span class="home__card-description">
+                                    Understand howt to maximise your
+                                    <span style="margin-right: 5px;"> </span> 
+                                    <sl-tooltip content="Surplus funds are basically extra money or funds that remain after you've covered all your expenses and financial obligations." style="display: inline-block;">
+                                        <span style="text-decoration: underline; cursor: help;">surplus funds</span>
+                                    </sl-tooltip>.
+                                </span>
+                                
+
+                                <sl-button variant="secondary" class="sort-btn">
+                                    View more
+                                  </sl-button>
+
+                                <!--==================== SORT YOUR EXPENSES MODAL ====================-->
+                                  <sl-dialog label="Sorting your expenses" class="sort-dialog dialog-width" style="--width: 80vw">
+                                    <strong>Introduction</strong> <br>
+                                    Welcome to our investing education platform! One of the foundational skills for financial success is effective budgeting. 
+                                    A budget serves as a roadmap for managing your money, ensuring that your income covers your expenses while also allowing you to save and invest for the future. 
+                                    In this guide, we'll walk you through the essential steps to create and maintain a successful budget.<br> <br> 
+                                    <strong>🕵️ Assess your financial landscape</strong> <br>
+                                    Before diving into the specifics of budgeting, it's crucial to understand your financial situation.
+                                    Start by gathering information about your income and expenses. Make a list of all your income sources, including your salary, side hustle earnings, 
+                                    and any other monetary inflows. Next, catalog your expenses, categorizing them into fixed (unchanging) and variable (fluctuating) costs. 
+                                    This initial assessment provides a clear picture of your financial health.<br> <br> 
+                                    <strong>🧮 Calculate Your Monthly Income</strong><br>
+                                    To create an effective budget, you need to know how much money you have coming in each month. 
+                                    Sum up all your income sources, including your primary job, freelance work, or any other supplementary income. 
+                                    Be sure to use your net income (after taxes) for a realistic view of your available funds. <br> <br>
+                                    <strong>🫵 Identify Fixed Expenses</strong><br>
+                                    Fixed expenses are recurring costs that remain relatively stable each month. 
+                                    Common examples include rent or mortgage payments, utilities, insurance premiums, and loan repayments. 
+                                    List these fixed expenses and assign specific amounts to each. 
+                                    This step helps establish a baseline for your mandatory financial commitments. <br> <br>
+                                    <strong>🧠 Account for Variable Expenses</strong><br>
+                                    Variable expenses, unlike fixed costs, can fluctuate from month to month. These include groceries, entertainment, dining out, 
+                                    and discretionary spending. Review your past spending habits to estimate average monthly expenditures in each category. 
+                                    While variable expenses may change, having a rough estimate enables you to plan accordingly. <br> <br>
+                                    <strong>💪 Factor in Savings and Investments</strong><br>
+                                    Allocate a portion of your income to savings and investments.
+                                    Aim for at least 20% of your net income to build a financial cushion and work towards your long-term goals. Establish separate categories for emergency funds, retirement contributions, and other savings objectives. 
+                                    Treating savings as a non-negotiable expense ensures consistent wealth accumulation. <br> <br>
+                                    <strong>📝 Create a Realistic Budget</strong><br>
+                                    Now that you have a clear understanding of your income and expenses, it's time to create a budget. 
+                                    Balance your income against your fixed and variable expenses, savings, and investments. 
+                                    Strive for a budget that not only covers your necessities but also leaves room for personal enjoyment and discretionary spending. <br> <br>
+                                    <strong>👀 Monitor and Adjust</strong><br>
+                                    Budgeting is an ongoing process. Regularly monitor your spending and compare it to your budgeted amounts. 
+                                    Use this information to identify areas where you can cut back or reallocate funds. Life circumstances change, so be prepared to adjust your budget accordingly. 
+                                    Staying flexible ensures that your budget remains effective in the face of evolving financial situations. <br> <br>
+                                    <strong>🔨 Utilise Budgeting Tools</strong><br>
+                                    Numerous budgeting tools and apps can simplify the process. These tools automatically categorize your expenses, track your spending, and provide insightful reports. 
+                                    Popular options include Mint, YNAB (You Need A Budget), and PocketGuard. 
+                                    Experiment with different tools to find the one that best suits your preferences and needs.<br><br> 
+                                    <strong>Conclusion</strong><br>
+                                    Congratulations! You've taken a significant step towards financial empowerment by mastering the art of budgeting. 
+                                    Remember, budgeting is a dynamic process that requires regular attention and adjustment. By carefully assessing your financial landscape, creating a realistic budget, and staying disciplined, you're well on your way to achieving your financial goals. 
+                                    Continue to educate yourself on smart financial practices, and watch your wealth grow over time. Happy budgeting!
+                                </sl-dialog>
+                            </div>
+
+                            <!--==================== CUT YOUR EXPENSES MODAL ====================-->
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Cut your expenses
+                                </h1>
+                                <span class="home__card-description">
+                                    Don’t spend more than you need to - reduce <br> ongoing bills and find cheaper alternatives.
+                                </span>
+                                
+                                <sl-button variant="secondary" class="expenses-btn">
+                                    View more
+                                  </sl-button>
+                                
+                                  <sl-dialog label="Cut your expenses" class="expenses-dialog" style="--width: 80vw">
+                                    <strong>Introduction</strong> <br>
+                                    Hey there and welcome to our expense-cutting guide! Just like effective budgeting, learning to trim expenses is a key skill for financial success. 
+                                    Think of it as fine-tuning your financial roadmap – ensuring your income covers your needs while leaving room for saving and investing. 
+                                    In this guide, we'll take you through some essential steps to help you cut those costs and keep your financial journey on track. 
+                                    So, let's dive in and get your wallet feeling a little lighter! <br> <br>
+                                    <!-- Slider main container -->
+                                    <div class="swiper">
+                                        <!-- Additional required wrapper -->
+                                        <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <div class="swiper-slide"><img src="img/insurance.jpeg" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/utilities.jpeg" alt=""></div>
+                                        <div class="swiper-slide"><img src="img/phone.webp" alt=""></div>
+                                        
+                                        </div>
+                                        
+                                        <div class="swiper-pagination"></div>
+                                    
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+                                    <br> <br> 
+                                    <strong>What you can review today</strong> <br><br>
+                                    <strong>Utility Bills:</strong>Review your electricity, water, and gas bills. Look for ways to reduce consumption by being more mindful of your usage, and consider switching to energy-efficient appliances or installing energy-saving devices. <br><br>
+                                    <strong>Phone and Internet Plans: </strong>Check if you're getting the best deal on your phone and internet plans. Compare different providers and consider switching to a cheaper plan or negotiating with your current provider for a better rate. <br> <br>
+                                    <strong>Subscription Services:</strong> Evaluate your subscription services such as streaming platforms, magazines, or gym memberships. Cancel any subscriptions that you don't use frequently or find alternatives that offer better value for money.<br> <br>
+                                    <strong>Insurance Policies: </strong>Review your insurance policies including health insurance, car insurance, and home insurance. Shop around for better rates or consider adjusting your coverage to lower your premiums.<br><br>
+                                    <strong>Grocery Expenses: </strong>Take a closer look at your grocery expenses and consider meal planning, buying generic brands, or shopping at discount stores to save money on food. <br><br>
+                                    <strong>Dining Out and Entertainment:</strong> Limit dining out and entertainment expenses by cooking at home more often, packing lunches for work, and finding free or low-cost activities for entertainment.<br><br>
+                                    <strong> Costs:</strong> Reduce transportation costs by carpooling, using public transportation, biking, or walking whenever possible. Also, consider refinancing your auto loan if you have one to lower your monthly payments.<br><br>
+                                    <strong>Credit Card Interest:</strong> If you have credit card debt, review your interest rates and consider transferring balances to cards with lower rates or consolidating debt with a personal loan to reduce interest payments.<br><br>
+                                    <strong>Bank Fees:</strong> Review your bank statements for any unnecessary fees such as ATM fees, overdraft fees, or account maintenance fees. Switch to a bank or credit union that offers fee-free accounts or waive fees by meeting certain requirements.<br><br>
+                                    <strong>Subscriptions and Memberships:</strong> Review your monthly subscriptions and memberships to services like streaming platforms, gym memberships, or professional associations. Cancel any that you no longer use or need.<br><br>
+                                  </sl-dialog>
+                            </div>
+
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Build your emergency savings
+                                </h1>
+                                <span class="home__card-description">
+                                    Build your safety net to ensure you don’t fall <br> into debt when unexpected expenses occur.
+                                </span>
+
+                                <sl-button variant="secondary" class="emergency-btn">
+                                    View more
+                                  </sl-button>
+
+                                <!--==================== EMERGENCY SAVINGS MODAL ====================-->
+                                  <sl-dialog label="Build your emergency savings" class="emergency-dialog dialog-width" style="--width: 80vw">
+                                    <strong>Introduction</strong> <br>
+                                            Emergency savings are like your financial safety net for unexpected expenses or emergencies, such as medical bills or car repairs.
+                                            It's money set aside to avoid going into debt or dipping into long-term savings. 
+                                            Ideally, aim for three to six months' worth of living expenses in your fund. <br> <br> 
+                                    <div class="content-container">
+                                        <img src="img/handshake.png" alt="Handshake" width="40%"">
+                                        <div class="text-container">
+                                            <strong>How much to save</strong> <br>
+                                            Determining how much to save for emergencies depends on your individual financial situation and comfort level. 
+                                            However, a common recommendation is to aim for an emergency fund that can cover three to six months' worth of living expenses. 
+                                            This cushion provides a buffer in case of unexpected events like job loss, medical emergencies, or major repairs. If that seems overwhelming, 
+                                            start with a smaller goal, like saving $1,000, and gradually build up from there. <br> <br> 
+                                            The key is to have enough saved to handle unforeseen circumstances without resorting to high-interest debt or depleting other savings accounts. <br> <br> 
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <strong>Calculate your emergency savings</strong> <br> 
+                                    Step 1: Calculate how much you spend each month on everyday and discretionary expenses <br>
+                                    Step 2: Decide how many months you would like to save for (typically between 3 and 6 months) <br> 
+                                    Step 3: Multiply the 2 numbers together.
+                                </sl-dialog>
+                            </div>
+
+                            <div class="card__container">
+                                <iframe width="100%" height="70%" src="https://www.youtube.com/embed/YRdO8i7yBnY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <h1 class="home__card-title"> BUDGET WITH ME! how to budget & save at ANY income 💸 </h1>
+                            </div>                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== DEBT ====================-->
+            <section class="debt_container" id="debt">
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <div class="sections_container">
+                        <h1 class="home__title">
+                            Step 2: Debt <br>
+                        </h1>
+                        <img class="section_image" src="img/calculate.png" alt="">
+                        <p class="home__description">
+                            Once your budget is in order and before you start investing, you should pay down all high-interest debt.
+                        </p>
+                        </div>
+
+                        <div class="flex-container">
+                            <!--==================== DEBT RESOURCE CARDS ====================-->
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Which debt to pay first?
+                                </h1>
+                                <span class="home__card-description">
+                                    Understand different ways to prioritise paying down debt when you have multiple. 
+                                </span>
+
+                                <sl-button variant="secondary" class="debt-btn">
+                                    View more
+                                </sl-button>
+
+                                <!--==================== WHICH DEBT MODAL ====================-->
+                                <sl-dialog label="Which debt should I pay first?" class="debt-dialog dialog-width" style="--width: 80vw">
+                                    <strong>Introduction</strong> <br>
+                                    Deciding which debt to pay off first can feel overwhelming, especially when facing multiple financial obligations. 
+                                    However, with a strategic approach, you can tackle your debts effectively and pave the way for financial freedom. 
+                                    Here's a simple guide to help you decide which debt to prioritise:<br> <br>
+                                    <strong>Steps</strong> <br>
+                                    <div class="content-container">
+                                        <div>
+                                        <strong> 1. List Your Debts:  </strong>  Start by listing all your debts, including credit cards, loans, and any other outstanding balances. Note the interest rates, minimum payments, and outstanding balances for each debt. <br>
+                                        <strong> 2. Identify High-Interest Debts:  </strong> High-interest debts, such as credit card balances with steep interest rates, should typically be prioritized. These debts cost you more in the long run, so paying them off first can save you money on interest payments.<br>
+                                        <strong> 3. Consider Debt Size: </strong>  While high-interest debts are a priority, also consider the size of each debt. Sometimes, tackling smaller debts first can provide a psychological boost and motivation to continue paying off larger debts.<br>
+                                        <strong> 4. Evaluate Financial Goals:  </strong> Assess your financial goals and priorities. Are you saving for a down payment on a house, planning for retirement, or building an emergency fund? Allocating funds towards these goals while simultaneously paying off debt requires a balanced approach.<br>
+                                        <strong> 5. Review Payment Options:  </strong> Explore different payment strategies, such as the debt avalanche or debt snowball method. With the debt avalanche method, you prioritize debts with the highest interest rates first, while the debt snowball method focuses on paying off the smallest debts first to gain momentum.<br>
+                                        <strong> 6. Consider Tax Implications:  </strong> Some debts, like student loans or mortgages, may offer tax benefits. Consider these factors when deciding which debts to prioritize.<br>
+                                        <strong> 7. Seek Professional Advice:  </strong> If you're unsure about the best approach for your situation, consider seeking advice from a financial advisor. They can provide personalized guidance based on your financial goals and circumstances.<br>  
+                                        </div>
+                                        <img src="img/lemon.png" alt="">  
+                                    </div>
+                                </sl-dialog>
+                            </div>
+
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Good VS Bad debt
+                                </h1>
+                                <span class="home__card-description">
+                                    Not all debt is bad debt and needs to be paid immediately.
+                                </span>
+
+                                <sl-button variant="secondary" class="goodvsbad-btn">
+                                    View more
+                                </sl-button>
+                                
+                                <!--==================== GOOD VS BAD MODAL ====================-->
+                                <sl-dialog label="Good VS Bad Debt" class="goodvsbad-dialog" style="--width: 80vw">
+                                <strong>Introduction</strong> <br>
+                                Navigating the world of debt can be a daunting task, especially with the myriad of options available to Australians. 
+                                From mortgages to credit cards, it's essential to understand the difference between good debt and bad debt and how they impact your financial wellbeing. 
+                                Let's delve into the nuances of good versus bad debt in an Australian. <br> <br>
+
+                                <sl-tab-group>
+                                    <sl-tab slot="nav" panel="good">Good debt</sl-tab>
+                                    <sl-tab slot="nav" panel="bad">Bad debt</sl-tab>
+                                
+                                    <sl-tab-panel name="good">
+                                        This is the general tab panel. Good debt is often associated with investments that have the potential to increase in value over time or generate income. 
+                                        In an Australian context, some examples of good debt include: <br> <br>
+
+                                        <strong> 🏡 Mortgages: </strong> Taking out a mortgage to purchase a home is one of the most common forms of good debt. 
+                                        Property values in Australia have historically appreciated over time, making homeownership a valuable asset that can build wealth in the long run. <br> 
+                                        <strong> 🎓 Student Loans: </strong> Investing in education can lead to increased earning potential and career opportunities. 
+                                        While student loans accrue interest, they are considered an investment in your future earning capacity, making them a form of good debt.<br> 
+                                        <strong> 📊 Business Loans: </strong> Entrepreneurs often take out loans to start or expand their businesses. 
+                                        When used wisely, these loans can generate income and contribute to the growth of the business, making them a form of good debt. <br> 
+                                        <strong> 📈 Investment Loans: </strong> Borrowing to invest in shares, managed funds, or other income-producing assets can be considered good debt if the returns on the investment exceed the cost of borrowing. <br> <br> 
+                                        
+                                        Good debt is characterised by <i>low-interest rates, tax-deductible interest, and the potential to increase wealth or generate income over time. </i> </sl-tab-panel>
+                                    <sl-tab-panel name="bad">
+                                        On the other hand, bad debt typically refers to high-cost debts used to finance consumption or depreciating assets. 
+                                        In an Australian context, examples of bad debt include: <br> <br>
+                                        <strong> 💳Credit Card Debt: </strong>Credit cards often carry high-interest rates, making them one of the most common forms of bad debt. Using credit cards to finance lifestyle expenses or purchases that do not increase in value can lead to long-term financial strain. <br>
+                                        <strong>💸Personal Loans: </strong>Personal loans used for non-essential purchases, such as vacations or luxury items, fall into the category of bad debt. These loans often come with higher interest rates compared to other forms of borrowing. <br>
+                                        <strong> 🛍Payday Loans:</strong> Payday loans, with their exorbitant interest rates and short repayment terms, are considered one of the worst forms of bad debt. They often trap borrowers in a cycle of debt and financial hardship. <br>
+                                        <strong> 🚗Car Loans:</strong> While owning a car is essential for many Australians, financing it with a high-interest car loan can turn it into bad debt, especially if the car depreciates quickly in value. <br> 
+                                        
+                                        <br> Bad debt is characterized by high-interest rates, no tax benefits, and the inability to increase wealth or generate income.
+                                    </sl-tab-panel>
+                                    <br> 
+                                    <strong> Informed Financial Decisions</strong> <br> 
+                                    Understanding the difference between good debt and bad debt is crucial for making informed financial decisions. While good debt can be used strategically to build wealth and assets, bad debt can quickly spiral out of control and lead to financial stress.
+                                    Before taking on any form of debt, Australians should carefully consider their financial goals, borrowing capacity, and the potential long-term implications of the debt. Seeking advice from financial professionals can also provide valuable guidance in navigating the complexities of debt management.
+                                    Ultimately, the key to financial success lies in using debt wisely, leveraging good debt to create opportunities for wealth accumulation, while avoiding the pitfalls of bad debt that can hinder long-term financial stability. By making informed choices and staying disciplined in managing debt, Australians can work towards achieving their financial goals and securing a brighter financial future.
+                                </sl-tab-group>
+                                </sl-dialog>
+                            </div>
+
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Credit score who?
+                                </h1>
+                                <span class="home__card-description">
+                                    What is a credit score? Where can I find it? <br> Answer all you need to know here.
+                                </span>
+
+                                <sl-button variant="secondary" class="credit-btn">
+                                    View more
+                                 </sl-button>
+
+                                <!--==================== CREDIT SCORE MODAL ====================-->
+                                    <sl-dialog label="Credit score who?" class="credit-dialog dialog-width" style="--width: 80vw">
+                                    <strong>Introduction</strong> <br>
+                                    Understanding your credit score is a crucial aspect of managing your financial health in Australia. 
+                                    Your credit score is a numerical representation of your creditworthiness, indicating to lenders how likely you are to repay debts on time. 
+                                    In Australia, credit scores typically range from 0 to 1,200, with higher scores indicating lower credit risk. <br> <br> 
+                                    <div class="content-container">
+                                        <div class="text-container">
+                                            <strong>Factors Affecting Your Credit Score</strong> <br>
+                                            Several factors influence your credit score in Australia, including:
+                                            <br>
+                                            <br> <strong> History: </strong>Your repayment history accounts for the largest portion of your credit score. Lenders assess whether you have made timely payments on your debts, including credit cards, loans, and utility bills.
+                                            <br> <strong>Credit Utilisation: </strong>This refers to the percentage of your available credit that you are currently using. Maintaining a low credit utilization ratio demonstrates responsible borrowing behaviour and can positively impact your credit score.
+                                            <br> <strong>Length of Credit History: </strong> The length of time you have been using credit products also affects your credit score. A longer credit history can demonstrate stability and responsible financial management.
+                                            <br> <strong>Credit Mix: </strong> Lenders like to see a diverse mix of credit products on your credit report, such as credit cards, personal loans, and mortgages. Managing different types of credit responsibly can improve your credit score.
+                                            <br> <strong>Recent Credit Applications: </strong> Applying for multiple credit products within a short period can signal financial stress and may negatively impact your credit score.
+                                        </div>
+                                        <img src="img/filed.png" alt="Filing cabinate" width=40%/>
+                                    </div> <br> <br> 
+                                    <strong>Why Your Credit Score Matters</strong> <br>
+                                    Your credit score plays a significant role in various financial transactions in Australia, including: <br> <br> 
+                                    <br> <strong> Loan Approvals: </strong> Lenders use your credit score to assess your creditworthiness when you apply for loans, mortgages, or credit cards. A higher credit score increases your chances of loan approval and may qualify you for better interest rates and terms.
+                                    <br> <strong> Renting a Property: </strong> Landlords often check potential tenants' credit scores as part of the rental application process to assess their reliability in paying rent on time.
+                                    <br> <strong> Utility Services: </strong> Some utility providers may check your credit score before providing services or setting up accounts.
+                                    <br> <strong> Employment Opportunities: </strong> In certain industries, employers may request access to your credit report as part of the hiring process, particularly for roles that involve financial responsibilities.
+                                    <br>
+                                    <div class="content-container">
+                                        <div class="text-container">
+                                            <br> <br>
+                                            <strong>Factors Affecting Your Credit Score</strong> <br>
+                                            Several factors influence your credit score in Australia, including:
+                                            
+                                            <strong> History: </strong>Your repayment history accounts for the largest portion of your credit score. Lenders assess whether you have made timely payments on your debts, including credit cards, loans, and utility bills.
+                                            <br> <strong>Credit Utilisation: </strong>This refers to the percentage of your available credit that you are currently using. Maintaining a low credit utilization ratio demonstrates responsible borrowing behaviour and can positively impact your credit score.
+                                            <br> <strong>Length of Credit History: </strong> The length of time you have been using credit products also affects your credit score. A longer credit history can demonstrate stability and responsible financial management.
+                                            <br> <strong>Credit Mix: </strong> Lenders like to see a diverse mix of credit products on your credit report, such as credit cards, personal loans, and mortgages. Managing different types of credit responsibly can improve your credit score.
+                                            <br> <strong>Recent Credit Applications: </strong> Applying for multiple credit products within a short period can signal financial stress and may negatively impact your credit score.
+                                        </div> <br> <br> 
+                                        <img src="img/stand.png" alt="Food stand" width=40%/>
+                                    </div>
+                                </sl-dialog>
+                            </div>
+
+                            <div class="card__container">
+                                <iframe width="100%" height="70%" src="https://www.youtube.com/embed/s08LmjH2v1s?si=M2nszNVe1OV5072Y" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <h1 class="home__card-title"> Debt Snowball vs Avalanche Method: Best Way to Pay Off Debt? </h1>
+                            </div>                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== INVEST ====================-->
+            <section class="budget_container" id="invest">
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <div class="sections_container">
+                        <h1 class="home__title">
+                            Step 3: Invest <br>
+                        </h1>
+                        <img class="section_image" src="img/computer.png" alt="">
+                        <p class="home__description">
+                            The last step is to get started investing. <br> With all debts paid down and your budget automated you can take your remaining funds and invest them.
+                        </p>
+                        </div>
+
+                        <div class="flex-container">
+                            <!--==================== INVEST RESOURCE CARDS ====================-->
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Investing 101
+                                </h1>
+                                <span class="home__card-description">
+                                    Understand the 
+                                    <span style="margin-right: 5px;"> </span> 
+                                    <sl-tooltip content="Australian Securities Exchange" style="display: inline-block;">
+                                        <span style="text-decoration: underline; cursor: help;">ASX</span>
+                                    </sl-tooltip>
+                                    <span style="margin-right: 5px;"> </span> 
+                                    and everything else you need to get started.
+                                </span>
+
+                                <sl-button variant="secondary" class="invest-btn">
+                                    View more
+                                </sl-button>
+
+                                <!--==================== INVESTING 101 MODAL ====================-->
+                                <sl-dialog label="Investing 101" class="invest-dialog dialog-width" style="--width: 80vw">
+                                    <strong>Introduction</strong> <br>
+                                    Navigating the world of investments can be a daunting task, especially for those new to the game. 
+                                    With various asset classes, risk factors, and investment strategies to consider, understanding the Australian Securities Exchange (ASX) and making informed 
+                                    investment decisions requires knowledge and careful planning. 
+                                    In this comprehensive guide, we'll cover everything you need to know about the ASX, types of investments, risk tolerance, diversification, and more.<br> <br>
+                                    <strong>Understanding the ASX</strong> <br>
+                                    The Australian Securities Exchange (ASX) is the primary stock exchange in Australia, where investors buy and sell shares in publicly listed companies. 
+                                    Established in 1987, the ASX plays a crucial role in facilitating capital formation and investment opportunities for individuals and institutions alike.
+                                    It is home to a wide range of securities, including stocks, exchange-traded funds (ETFs), real estate investment trusts (REITs), and more. <br> <br>
+                                    <strong>Types of investments</strong> <br>
+                                    <sl-tab-group>
+                                        <sl-tab slot="nav" panel="stocks">Stocks</sl-tab>
+                                        <sl-tab slot="nav" panel="ETFs">ETFs</sl-tab>
+                                        <sl-tab slot="nav" panel="funds">Managed funds</sl-tab>
+                                        <sl-tab slot="nav" panel="REITs">REITs</sl-tab>
+                                    
+                                        <sl-tab-panel name="stocks">
+                                            Stocks, also known as shares or equities, represent ownership in a company.
+                                            Investing in stocks allows you to participate in the company's growth and share in its profits through capital appreciation and dividends.<br> 
+                                        </sl-tab-panel>
+                                        <sl-tab-panel name="ETFs">
+                                            ETFs are investment funds that trade on the ASX like individual stocks. 
+                                            They typically track a specific index, commodity, or sector and offer diversification benefits with lower costs compared to actively managed funds. <br> 
+                                        </sl-tab-panel>
+                                        <sl-tab-panel name="funds">
+                                            Managed funds pool money from multiple investors to invest in a diversified portfolio of assets managed by professional fund managers. 
+                                            These funds can offer exposure to various asset classes, including stocks, bonds, and property. <br> 
+                                        </sl-tab-panel>
+                                        <sl-tab-panel name="REITs">
+                                            REITs are companies that own, operate, or finance income-generating real estate properties. 
+                                            Investing in REITs allows investors to gain exposure to the real estate market without directly owning physical properties. <br>
+                                        </sl-tab-panel>
+                                        <br> 
+                                        <strong> Informed Financial Decisions</strong> <br> 
+                                        Understanding the difference between good debt and bad debt is crucial for making informed financial decisions. While good debt can be used strategically to build wealth and assets, bad debt can quickly spiral out of control and lead to financial stress.
+                                        Before taking on any form of debt, Australians should carefully consider their financial goals, borrowing capacity, and the potential long-term implications of the debt. Seeking advice from financial professionals can also provide valuable guidance in navigating the complexities of debt management.
+                                        Ultimately, the key to financial success lies in using debt wisely, leveraging good debt to create opportunities for wealth accumulation, while avoiding the pitfalls of bad debt that can hinder long-term financial stability. By making informed choices and staying disciplined in managing debt, Australians can work towards achieving their financial goals and securing a brighter financial future.
+                                    </sl-tab-group> <br> 
+                                    <strong>Risk Tolerance</strong> <br>
+                                    Understanding your risk tolerance is essential when making investment decisions. Risk tolerance refers to your ability and willingness to withstand fluctuations in the value of your investments. 
+                                    Factors influencing risk tolerance include your investment goals, time horizon, financial situation, and personal comfort level with volatility. 
+                                    Generally, younger investors with longer time horizons may have a higher risk tolerance and can afford to take on more aggressive investment strategies, 
+                                    whereas older investors nearing retirement may prefer more conservative investments to preserve capital. <br> <br> 
+                                    <strong>Diversification</strong> <br>
+                                    Diversification is a fundamental principle of investing that involves spreading your investment across different asset classes, industries, and geographic regions to reduce risk. 
+                                    By diversifying your portfolio, you can mitigate the impact of volatility in any single investment and potentially improve overall returns. 
+                                    Diversification can be achieved through investing in a mix of stocks, bonds, cash, and alternative assets, as well as across different industries and countries. <br> <br> 
+                                    <strong>Conclusion</strong> <br>
+                                    Investing in the ASX and navigating the world of investments requires careful consideration of various factors, including risk tolerance, investment goals, and diversification. 
+                                    By understanding the different types of investments available, assessing your risk tolerance, and diversifying your portfolio, you can make informed investment decisions and work towards achieving your financial goals. 
+                                    Remember to conduct thorough research, seek professional advice if needed, and stay informed about market trends and developments to make the most of your investments on the ASX. <br> 
+                                </sl-dialog>
+                            </div>
+
+                            <div class="card__container">
+                                <h1 class="home__card-title">
+                                    Demystifying super
+                                </h1>
+                                <span class="home__card-description">
+                                    You may not know you are already an investor - through your super! Learn how to make the most of it..
+                                </span>
+                                <a href="https://moneysmart.gov.au/how-super-works#:~:text=Super%20is%20a%20way%20of,and%20different%20types%20of%20accounts." class="button">
+                                    View more
+                                </a>
+                            </div>
+
+                            <div class="card__container">
+                                <iframe  width="100%" height="70%" src="https://www.youtube.com/embed/ZykJzwueIzM?si=Z_hOOuOI6Fc43dqz" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <h1 class="home__card-title"> How To Invest In Australia As A Beginner (Step By Step) </h1>
+                            </div>                              
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll">
+            <i class='bx bx-chevrons-up'></i>
+        </a>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="js/scrollreveal.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
